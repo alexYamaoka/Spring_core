@@ -6,7 +6,7 @@
 
 
 
-    <bean id = "airtel" class = "com.example.ioc.Airtel"></bean>
+    <bean id = "sim" class = "com.example.ioc.Jio"></bean>
 
 
 

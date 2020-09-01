@@ -17,9 +17,17 @@ public class DemoApplication
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 		System.out.println("config file loaded");
 
-		Airtel airtel =  (Airtel) applicationContext.getBean("airtel");
-		airtel.calling();
-		airtel.data();
+//		Airtel airtel =  (Airtel) applicationContext.getBean("airtel");
+//		airtel.calling();
+//		airtel.data();
+
+//		Airtel airtel = applicationContext.getBean("airtel", Airtel.class);
+//		airtel.calling();
+//		airtel.data();
+
+		Sim sim = applicationContext.getBean("sim", Sim.class);
+		sim.calling();
+		sim.data();
 	}
 
 }
