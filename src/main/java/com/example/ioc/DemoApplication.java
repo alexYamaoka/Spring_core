@@ -2,6 +2,8 @@ package com.example.ioc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
 public class DemoApplication
@@ -11,22 +13,9 @@ public class DemoApplication
 	{
 		SpringApplication.run(DemoApplication.class, args);
 
-//		Vodaphone vodaphone = new Vodaphone();
-//		vodaphone.calling();
-//		vodaphone.data();
-//
-//		Airtel airtel = new Airtel();
-//		airtel.calling();
-//		airtel.data();
 
-
-		// program using interface
-		// Polymorphism
-
-		Sim sim = new Vodaphone();
-		sim.calling();
-		sim.data();
-
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+		System.out.println("config file loaded");
 
 	}
 
