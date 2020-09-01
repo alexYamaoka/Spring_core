@@ -17,6 +17,9 @@ public class DemoApplication
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 		System.out.println("config file loaded");
 
+		Airtel airtel =  (Airtel) applicationContext.getBean("airtel");
+		airtel.calling();
+		airtel.data();
 	}
 
 }

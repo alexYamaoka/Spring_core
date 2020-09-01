@@ -2,6 +2,11 @@ package com.example.ioc;
 
 public class Airtel implements Sim
 {
+    public Airtel()
+    {
+        System.out.println("Airtel constructor called");
+    }
+
     @Override
     public void calling()
     {
