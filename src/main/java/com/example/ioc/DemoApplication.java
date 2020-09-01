@@ -11,9 +11,23 @@ public class DemoApplication
 	{
 		SpringApplication.run(DemoApplication.class, args);
 
-		Airtel airtel = new Airtel();
-		airtel.calling();
-		airtel.data();
+//		Vodaphone vodaphone = new Vodaphone();
+//		vodaphone.calling();
+//		vodaphone.data();
+//
+//		Airtel airtel = new Airtel();
+//		airtel.calling();
+//		airtel.data();
+
+
+		// program using interface
+		// Polymorphism
+
+		Sim sim = new Vodaphone();
+		sim.calling();
+		sim.data();
+
+
 	}
 
 }

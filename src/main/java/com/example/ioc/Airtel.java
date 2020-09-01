@@ -5,7 +5,7 @@ public class Airtel implements Sim
     @Override
     public void calling()
     {
-        System.out.println("Calling using Airtel Mobile");
+        System.out.println("Calling using Airtel Sim");
     }
 
     @Override
