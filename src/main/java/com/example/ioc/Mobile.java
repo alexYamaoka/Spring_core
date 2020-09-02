@@ -6,12 +6,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
-public class DemoApplication
+public class Mobile
 {
 
 	public static void main(String[] args)
 	{
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(Mobile.class, args);
 
 
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
