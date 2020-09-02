@@ -42,6 +42,13 @@
         </property>
     </bean>
 
+
+    <bean id = "anotherStudent" class = "com.example.di_object_type.AnotherStudent">
+        <property name="mathCheat">
+            <bean class = "com.example.di_object_type.MathCheat"/>
+        </property>
+    </bean>
+
 </beans>
 
 
