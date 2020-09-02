@@ -8,12 +8,27 @@
 
 
 
-
-    <bean id = "student" class = "com.example.dependencyInjection.Student">
+    <!-- setter injection -->
+    <bean id = "alex" class = "com.example.dependencyInjection.Student">
         <property name="id" value="1"/>
         <property name="studentName" value="Alex Yamaoka"/>
     </bean>
 
+
+    <bean id = "kevin" class = "com.example.dependencyInjection.Student">
+        <property name="id" value="2"/>
+        <property name="studentName" value="Kevin Hart"/>
+    </bean>
+
+
+
+
+
+    <!-- constructor injection -->
+    <bean id = "student" class = "com.example.dependencyInjection.Student">
+        <constructor-arg name="id" value="3"/>
+        <constructor-arg name="studentName" value="Tom Cruise"/>
+    </bean>
 
 
 </beans>
