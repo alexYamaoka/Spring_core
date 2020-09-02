@@ -10,6 +10,7 @@
 
 
     <bean id = "student" class = "com.example.dependencyInjection.Student">
+        <property name="id" value="1"/>
         <property name="studentName" value="Alex Yamaoka"/>
     </bean>
 
