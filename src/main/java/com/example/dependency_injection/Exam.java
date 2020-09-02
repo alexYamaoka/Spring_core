@@ -1,4 +1,4 @@
-package com.example.dependencyInjection;
+package com.example.dependency_injection;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

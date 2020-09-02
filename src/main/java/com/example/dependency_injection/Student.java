@@ -1,4 +1,4 @@
-package com.example.dependencyInjection;
+package com.example.dependency_injection;
 
 public class Student
 {
