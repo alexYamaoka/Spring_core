@@ -26,7 +26,7 @@
 
     <!-- constructor injection -->
     <bean id = "student" class = "com.example.dependencyInjection.Student">
-        <constructor-arg name="id" value="3"/>
+        <constructor-arg name="id" value="3" type = "int"/>
         <constructor-arg name="studentName" value="Tom Cruise"/>
     </bean>
 
