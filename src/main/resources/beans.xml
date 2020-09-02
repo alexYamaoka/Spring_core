@@ -8,7 +8,7 @@
 
     <bean id = "sim" class = "com.example.ioc.Jio"></bean>
 
-
+    <bean id = "student" class = "com.example.dependencyInjection.Student"></bean>
 
 
 
