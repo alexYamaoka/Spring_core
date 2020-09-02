@@ -31,6 +31,17 @@
     </bean>
 
 
+
+
+
+    <!--injecting objects types -->
+    <bean id = "cheatingStudent" class = "com.example.di_object_type.Student">
+        <property name="id" value="1001"/>
+        <property name="mathCheat">
+            <bean class="com.example.di_object_type.MathCheat"/>
+        </property>
+    </bean>
+
 </beans>
 
 
