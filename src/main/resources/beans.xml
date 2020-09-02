@@ -4,11 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+    <bean id="sim" class="com.example.ioc.Jio"/>
 
 
-    <bean id = "sim" class = "com.example.ioc.Jio"></bean>
 
-    <bean id = "student" class = "com.example.dependencyInjection.Student"></bean>
+
+    <bean id = "student" class = "com.example.dependencyInjection.Student">
+        <property name="studentName" value="Alex Yamaoka"/>
+    </bean>
 
 
 
