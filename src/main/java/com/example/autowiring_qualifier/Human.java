@@ -7,6 +7,7 @@ public class Human
     public void setHeart(Heart heart)
     {
         this.heart = heart;
+        System.out.println("setHeart method called");
     }
 
     public void startPumping()
