@@ -3,12 +3,26 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="heartObject" class="com.example.autowiring_qualifier.Heart"/>
+
+    <!-- autowire byName: bean id and class member/variable  must match up
+    <bean id="heart" class="com.example.autowiring_qualifier.Heart"/>
+    <bean id="human" class="com.example.autowiring_qualifier.Human" autowire="byName"/>
+    -->
 
 
-    <bean id="human" class="com.example.autowiring_qualifier.Human" autowire="byName">
 
-    </bean>
+    <!-- autowire byType: variable name and bean class must be the same
+    <bean id="heartObjectValue" class="com.example.autowiring_qualifier.Heart"/>
+
+    <bean id="human" class="com.example.autowiring_qualifier.Human" autowire="byType"/>
+    -->
+
+
+    <!-- autowire by Constructor: when you find a constructor for the dependency -->
+    <bean id="heartObjectValue" class="com.example.autowiring_qualifier.Heart"/>
+
+    <bean id="human" class="com.example.autowiring_qualifier.Human" autowire="constructor"/>
+
 
 
 

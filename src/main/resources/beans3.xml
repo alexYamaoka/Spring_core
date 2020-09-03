@@ -11,11 +11,17 @@
 
 
 
-    <!-- autowire byType: variable name and bean class must be the same-->
+    <!-- autowire byType: variable name and bean class must be the same
     <bean id="heartObjectValue" class="com.example.autowiring_qualifier.Heart"/>
 
-    <bean id="human2" class="com.example.autowiring_qualifier.Human" autowire="byType"/>
+    <bean id="human" class="com.example.autowiring_qualifier.Human" autowire="byType"/>
+    -->
 
+
+    <!-- autowire by Constructor: when you find a constructor for the dependency -->
+    <bean id="heartObjectValue" class="com.example.autowiring_qualifier.Heart"/>
+
+    <bean id="human" class="com.example.autowiring_qualifier.Human" autowire="constructor"/>
 
 
 
