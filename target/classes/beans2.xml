@@ -10,9 +10,6 @@
     <bean id="javaCheatObjectValue" class="com.example.loose_coupling.JavaCheat"/>
 
 
-    
-
-
     <bean id="student" class="com.example.loose_coupling.Student">
         <property name="cheat" ref="javaCheatObjectValue"/>
     </bean>
