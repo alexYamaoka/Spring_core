@@ -11,9 +11,11 @@
     <context:property-placeholder location="classpath:student-info.properties"/>
 
     <bean id="student" class="com.example.required_value_annotation.Student">
+        <!--
         <property name="name" value="${student.name}"/>
         <property name="interestedCourse" value="${student.interestedCourse}"/>
         <property name="hobby" value="${student.hobby}"/>
+        -->
     </bean>
 
 </beans>

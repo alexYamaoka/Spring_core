@@ -1,21 +1,26 @@
 package com.example.required_value_annotation;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Student
 {
     private String name;
     private String interestedCourse;
     private String hobby;
 
+    @Value("Kevin")         // to inject values statically
     public void setName(String name)
     {
         this.name = name;
     }
 
+    @Value("Biology")
     public void setInterestedCourse(String interestedCourse)
     {
         this.interestedCourse = interestedCourse;
     }
 
+    @Value("Soccer")
     public void setHobby(String hobby)
     {
         this.hobby = hobby;
