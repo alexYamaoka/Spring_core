@@ -32,7 +32,15 @@
     -->
 
 
-    <bean id="heartObjectValue" class="com.example.autowiring_qualifier.Heart"/>
+    <bean id="humanHeart" class="com.example.autowiring_qualifier.Heart">
+        <property name="nameOfAnimal" value="human"/>
+        <property name="numberOfHearts" value="1"/>
+    </bean>
+
+    <bean id="octopusHeart" class="com.example.autowiring_qualifier.Heart">
+        <property name="nameOfAnimal" value="octopus"/>
+        <property name="numberOfHearts" value="3"/>
+    </bean>
 
     <bean id="human" class="com.example.autowiring_qualifier.Human"/>
 
