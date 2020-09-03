@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="heart" class="com.example.autowiring_qualifier.Heart"/>
+    <bean id="heartObject" class="com.example.autowiring_qualifier.Heart"/>
 
 
     <bean id="human" class="com.example.autowiring_qualifier.Human" autowire="byName">
