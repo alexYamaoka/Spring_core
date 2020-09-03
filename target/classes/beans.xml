@@ -9,45 +9,52 @@
 
 
     <!-- setter injection -->
-    <bean id = "alex" class = "com.example.dependency_injection.Student">
+    <bean id="alex" class="com.example.dependency_injection.Student">
         <property name="id" value="1"/>
         <property name="studentName" value="Alex Yamaoka"/>
     </bean>
 
-
-    <bean id = "kevin" class = "com.example.dependency_injection.Student">
+    <bean id="kevin" class="com.example.dependency_injection.Student">
         <property name="id" value="2"/>
         <property name="studentName" value="Kevin Hart"/>
     </bean>
 
 
 
-
-
     <!-- constructor injection -->
-    <bean id = "student" class = "com.example.dependency_injection.Student">
+    <bean id="student" class="com.example.dependency_injection.Student">
         <constructor-arg name="id" value="3" type = "int"/>
         <constructor-arg name="studentName" value="Tom Cruise"/>
     </bean>
 
 
 
-
-
     <!--injecting objects types -->
-    <bean id = "cheatingStudent" class = "com.example.di_object_type.Student">
+    <bean id="cheatingStudent" class="com.example.di_object_type.Student">
         <property name="id" value="1001"/>
         <property name="mathCheat">
             <bean class="com.example.di_object_type.MathCheat"/>
         </property>
     </bean>
 
-
-    <bean id = "anotherStudent" class = "com.example.di_object_type.AnotherStudent">
+    <bean id="anotherStudent" class="com.example.di_object_type.AnotherStudent">
         <property name="mathCheat">
             <bean class = "com.example.di_object_type.MathCheat"/>
         </property>
     </bean>
+
+
+
+    <!-- if using multiple of the same object as a dependency -->
+    <bean id="mathCheatObject" class="com.example.di_object_type.MathCheat"/>
+
+    <bean id="badStudent" class = "com.example.di_object_type.Student">
+        <property name="id" value="5432"/>
+        <property name="mathCheat" ref = "mathCheatObject"/>
+    </bean>
+
+
+
 
 </beans>
 

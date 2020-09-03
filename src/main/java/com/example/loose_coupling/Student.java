@@ -2,15 +2,15 @@ package com.example.loose_coupling;
 
 public class Student
 {
-    private MathCheat mathCheat;
+    private Cheat cheat;
 
-    public void setMathCheat(MathCheat mathCheat)
+    public void setCheat(Cheat cheat)
     {
-        this.mathCheat = mathCheat;
+        this.cheat = cheat;
     }
 
     public void cheating()
     {
-        mathCheat.mathCheat();
+        cheat.cheat();
     }
 }

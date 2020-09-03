@@ -1,8 +1,9 @@
 package com.example.loose_coupling;
 
-public class MathCheat
+public class MathCheat implements Cheat
 {
-    public void mathCheat()
+    @Override
+    public void cheat()
     {
         System.out.println("math cheating started...");
     }
