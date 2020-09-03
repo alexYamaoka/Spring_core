@@ -7,7 +7,10 @@
 
     <bean id="scienceCheatObjectValue" class="com.example.loose_coupling.ScienceCheat"/>
 
+    <bean id="javaCheatObjectValue" class="com.example.loose_coupling.JavaCheat"/>
+
+
     <bean id="student" class="com.example.loose_coupling.Student">
-        <property name="cheat" ref="mathCheatObjectValue"/>
+        <property name="cheat" ref="javaCheatObjectValue"/>
     </bean>
 </beans>
