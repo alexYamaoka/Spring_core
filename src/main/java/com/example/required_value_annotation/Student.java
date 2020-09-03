@@ -8,19 +8,25 @@ public class Student
     private String interestedCourse;
     private String hobby;
 
-    @Value("Kevin")         // to inject values statically
+
+    //@Value("Kevin")         // to inject values statically
+    @Value("${student.name}")
     public void setName(String name)
     {
         this.name = name;
     }
 
-    @Value("Biology")
+
+    //@Required - deprecated... use autowired for constructor injection
+    //@Value("Biology")
+    @Value("${student.interestedCourse}")
     public void setInterestedCourse(String interestedCourse)
     {
         this.interestedCourse = interestedCourse;
     }
 
-    @Value("Soccer")
+    //@Value("Soccer")
+    @Value("${student.hobby}")
     public void setHobby(String hobby)
     {
         this.hobby = hobby;
