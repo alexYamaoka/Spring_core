@@ -4,10 +4,31 @@ import java.sql.*;
 
 public class StudentDAO
 {
-    private String driver = "com.mysql.cj.jdbc.Driver";
-    private String url = "jdbc:mysql://127.0.0.1:3306/?useTimezone=true&serverTimezone=UTC";
-    private String username = "root";
-    private String password = "password";
+    private String driver;
+    private String url;
+    private String username;
+    private String password;
+
+
+    public void setDriver(String driver)
+    {
+        this.driver = driver;
+    }
+
+    public void setUrl(String url)
+    {
+        this.url = url;
+    }
+
+    public void setUsername(String username)
+    {
+        this.username = username;
+    }
+
+    public void setPassword(String password)
+    {
+        this.password = password;
+    }
 
     public void selectAllRows() throws ClassNotFoundException, SQLException
     {
