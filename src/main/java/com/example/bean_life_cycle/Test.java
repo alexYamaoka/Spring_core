@@ -13,6 +13,15 @@ public class Test
         StudentDAO studentDAO = applicationContext.getBean("studentDAO", StudentDAO.class);
         studentDAO.selectAllRows();
 
-        ((ClassPathXmlApplicationContext)applicationContext).close();
+        //((ClassPathXmlApplicationContext)applicationContext).close();
+        ((ClassPathXmlApplicationContext)applicationContext).registerShutdownHook();
+
+
+
+        Hello hello = applicationContext.getBean("hello", Hello.class);
+
+        // registerShutdownHook and close do the same thing
+        // close - once you close the container, need to open it again
+        // registerShutdownHook - executes once the main thread/main method ends. Where it is placed does not matter.
     }
 }

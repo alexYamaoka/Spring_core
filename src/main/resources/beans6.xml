@@ -5,7 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd"
+        default-init-method="init"
+        default-destroy-method="destroy"
+        >
 
 
 
@@ -21,6 +24,11 @@
         <property name="username" value="root"/>
         <property name="password" value="password"/>
     </bean>
+
+
+
+
+    <bean id="hello" class="com.example.bean_life_cycle.Hello" init-method="init" destroy-method="destroy"/>
 
 
 
