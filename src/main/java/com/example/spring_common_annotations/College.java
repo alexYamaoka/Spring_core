@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 public class College
 {
     private Principal principal;
+    private Teacher teacher;
+
+
 
     public College()
     {
@@ -27,9 +30,15 @@ public class College
         this.principal = principal;
     }
 
+    public void setTeacher(Teacher teacher)
+    {
+        this.teacher = teacher;
+    }
+
     public void test()
     {
         System.out.println("testing this class method");
         principal.principalInfo();
+        teacher.teach();
     }
 }

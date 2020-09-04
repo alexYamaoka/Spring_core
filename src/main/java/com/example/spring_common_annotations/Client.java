@@ -13,5 +13,7 @@ public class Client
 
         College college = applicationContext.getBean("collegeBean", College.class);
         college.test();
+
+        ((AnnotationConfigApplicationContext) applicationContext).close();
     }
 }
