@@ -8,9 +8,10 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <context:annotation-config/>
 
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
     <!--
+    <context:annotation-config/>
     <context:component-scan base-package="com.example.spring_common_annotations"/>
     -->
 
