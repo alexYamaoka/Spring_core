@@ -36,7 +36,7 @@ public class StudentDAO
     }
 
 
-    @PostConstruct
+    //@PostConstruct
     public void init() throws ClassNotFoundException, SQLException
     {
         // load driver
@@ -62,7 +62,7 @@ public class StudentDAO
 
 
 
-    @PreDestroy
+    //@PreDestroy
     public void destroy() throws SQLException
     {
         System.out.println("closing connection");
