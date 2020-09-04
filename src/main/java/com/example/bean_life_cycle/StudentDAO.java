@@ -62,12 +62,22 @@ public class StudentDAO
 
 
 
-    @PreDestroy             // before this bean is removed from the ioc container, destroy method is called
-    public void closeConnection() throws SQLException
+    @PreDestroy
+    public void destroy() throws SQLException
     {
         System.out.println("closing connection");
         connection.close();
     }
+
+//    @PreDestroy             // before this bean is removed from the ioc container, destroy method is called
+//    public void closeConnection() throws SQLException
+//    {
+//        System.out.println("closing connection");
+//        connection.close();
+//    }
+
+
+
 
 
     public void selectAllRows() throws ClassNotFoundException, SQLException
