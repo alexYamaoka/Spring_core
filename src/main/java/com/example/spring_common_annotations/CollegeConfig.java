@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 //@ComponentScan(basePackages = "com.example.spring_common_annotations")        // only need if using @Component, not @Bean
 public class CollegeConfig
 {
-    @Bean
+    @Bean(name = "mathTeacherBean")
     public MathTeacher mathTeacherBean()
     {
         System.out.println("returning math teacher");
