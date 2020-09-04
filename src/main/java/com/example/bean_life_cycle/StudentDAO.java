@@ -32,6 +32,8 @@ public class StudentDAO
 
             System.out.println(firstName + " " + lastName + " " + studentID);
         }
+
+        connection.close();
     }
 
     public void deleteStudentRecord(int id) throws ClassNotFoundException, SQLException
@@ -48,6 +50,8 @@ public class StudentDAO
         statement.executeUpdate("DELETE FROM studentRecords.studentsList WHERE id = " + id);
 
         System.out.println("Record deleted with id: " + id);
+
+        connection.close();
     }
 
 }
