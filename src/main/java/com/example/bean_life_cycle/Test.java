@@ -12,5 +12,7 @@ public class Test
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans6.xml");
         StudentDAO studentDAO = applicationContext.getBean("studentDAO", StudentDAO.class);
         studentDAO.selectAllRows();
+
+        ((ClassPathXmlApplicationContext)applicationContext).close();
     }
 }

@@ -1,5 +1,7 @@
 package com.example.bean_life_cycle;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.sql.*;
 
 public class StudentDAO
@@ -33,7 +35,9 @@ public class StudentDAO
         this.password = password;
     }
 
-    public void createStudentDBConnection() throws ClassNotFoundException, SQLException
+
+    @PostConstruct
+    public void init() throws ClassNotFoundException, SQLException
     {
         // load driver
         Class.forName(driver);
@@ -42,21 +46,39 @@ public class StudentDAO
         connection = DriverManager.getConnection(url, username, password);
     }
 
+
+//    @PostConstruct    // once the object is created and dependencies are injected, execute this method automatically -- also known as init() method
+//    public void createStudentDBConnection() throws ClassNotFoundException, SQLException
+//    {
+//        System.out.println("Creating connection for student DB");
+//
+//        // load driver
+//        Class.forName(driver);
+//
+//        // get a connection
+//        connection = DriverManager.getConnection(url, username, password);
+//    }
+
+
+
+
+    @PreDestroy             // before this bean is removed from the ioc container, destroy method is called
     public void closeConnection() throws SQLException
     {
+        System.out.println("closing connection");
         connection.close();
     }
 
+
     public void selectAllRows() throws ClassNotFoundException, SQLException
     {
-        createStudentDBConnection();
+        //createStudentDBConnection();
 
         // execute query
         Statement statement = connection.createStatement();
 
         // retrieve results back as resultSet
         ResultSet resultSet = statement.executeQuery("SELECT * FROM studentRecords.studentsList;");
-
 
         while (resultSet.next())
         {
@@ -67,12 +89,12 @@ public class StudentDAO
             System.out.println(firstName + " " + lastName + " " + studentID);
         }
 
-        closeConnection();
+        //closeConnection();
     }
 
     public void deleteStudentRecord(int id) throws ClassNotFoundException, SQLException
     {
-        createStudentDBConnection();
+        //createStudentDBConnection();
 
         // execute query
         Statement statement = connection.createStatement();
@@ -81,7 +103,6 @@ public class StudentDAO
 
         System.out.println("Record deleted with id: " + id);
 
-        closeConnection();
+        //closeConnection();
     }
-
 }
