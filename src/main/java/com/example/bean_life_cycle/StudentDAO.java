@@ -9,6 +9,9 @@ public class StudentDAO
     private String username;
     private String password;
 
+    private Connection connection;
+
+
 
     public void setDriver(String driver)
     {
@@ -30,13 +33,23 @@ public class StudentDAO
         this.password = password;
     }
 
-    public void selectAllRows() throws ClassNotFoundException, SQLException
+    public void createStudentDBConnection() throws ClassNotFoundException, SQLException
     {
         // load driver
         Class.forName(driver);
 
         // get a connection
-        Connection connection = DriverManager.getConnection(url, username, password);
+        connection = DriverManager.getConnection(url, username, password);
+    }
+
+    public void closeConnection() throws SQLException
+    {
+        connection.close();
+    }
+
+    public void selectAllRows() throws ClassNotFoundException, SQLException
+    {
+        createStudentDBConnection();
 
         // execute query
         Statement statement = connection.createStatement();
@@ -54,16 +67,12 @@ public class StudentDAO
             System.out.println(firstName + " " + lastName + " " + studentID);
         }
 
-        connection.close();
+        closeConnection();
     }
 
     public void deleteStudentRecord(int id) throws ClassNotFoundException, SQLException
     {
-        // load driver
-        Class.forName(driver);
-
-        // get a connection
-        Connection connection = DriverManager.getConnection(url, username, password);
+        createStudentDBConnection();
 
         // execute query
         Statement statement = connection.createStatement();
@@ -72,7 +81,7 @@ public class StudentDAO
 
         System.out.println("Record deleted with id: " + id);
 
-        connection.close();
+        closeConnection();
     }
 
 }
