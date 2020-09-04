@@ -12,6 +12,11 @@ public class College
 {
     private Principal principal;
 
+    public College()
+    {
+
+    }
+
     public College(Principal principal)
     {
         this.principal = principal;

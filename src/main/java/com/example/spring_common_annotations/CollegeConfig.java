@@ -13,6 +13,7 @@ public class CollegeConfig
     @Bean(name = "principalBean")
     public Principal principalBean()
     {
+        System.out.println("returning principalBean");
         return new Principal();
     }
 
@@ -22,9 +23,13 @@ public class CollegeConfig
     @Bean(name = {"colBean", "anotherCollegeBean", "collegeBean"})             // can also give beanID name
     public College collegeBean()                                               // method name is the beanID by default
     {
-        System.out.println("inside collegeConfig class returning collegeBean");
+        System.out.println("returning collegeBean");
 
-        return new College(principalBean());
+        // return new College(principalBean());              // constructor injection
+
+        College college = new College();                     // setter injection
+        college.setPrincipal(principalBean());
+        return college;
     }
 
 }
