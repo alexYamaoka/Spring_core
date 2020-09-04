@@ -3,11 +3,12 @@ package com.example.spring_common_annotations;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.context.annotation.PropertySource;
 
 
 @Configuration                                                                  // this is a configuration class, just like the beans.xml file
 @ComponentScan(basePackages = "com.example.spring_common_annotations")        // only need if using @Component, not @Bean
+@PropertySource("classpath:college-info.properties")
 public class CollegeConfig
 {
 //    @Bean(name = "mathTeacherBean")

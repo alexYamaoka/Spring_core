@@ -40,7 +40,7 @@ public class College
         this.teacher = teacher;
     }
 
-    @Value("UCI")
+    @Value("${college.name}")
     public void setCollegeName(String collegeName)
     {
         this.collegeName = collegeName;
