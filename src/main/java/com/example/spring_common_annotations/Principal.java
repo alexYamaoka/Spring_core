@@ -1,5 +1,9 @@
 package com.example.spring_common_annotations;
 
+
+import org.springframework.stereotype.Component;
+
+@Component("principalBean")
 public class Principal
 {
     public void principalInfo()
